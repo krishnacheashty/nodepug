@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title customers
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous")
+  body
+  h4.text-center.m-3 Add customer here.
+   div
+     a(href='/addcustomer').btn.btn-primary.text-center.m-2 Add customer
+   div
+     table.table.table-striped
+       tbody
+         thead
+           tr
+             td.bg-info Firstname
+             td.bg-primary Lastname
+             td.bg-info Email
+             td.bg-primary Phone
+         each customer in customers
+           tr
+             td.bg-primary #{customer.firstname}
+             td.bg-success #{customer.lastname}
+             td.bg-primary #{customer.email}
+             td.bg-success #{customer.phone}
