@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT ||3000;
+const helmet = require('helmet');
+app.use(helmet());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
